@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Js3</title>
+    <link rel="stylesheet" href="css/demojs3.css"/>
+</head>
+<body>
+    <div class="box" onmouseenter="boxAction1()" onmouseleave="boxAction2()">
+    </div>
+    <input id="ips" type="text" placeholder="Họ..." onkeyup="inputAction1()" onkeydown="inputAction2()" onchange="inputAction3()"/>
+    <input id="ips1" type="text" placeholder="Tên..." onkeyup="inputAction1()" onkeydown="inputAction2()" onchange="inputAction3()"/>
+    <input id="ips2" type="text" placeholder="Tên Đệm..." onkeyup="inputAction1()" onkeydown="inputAction2()" onchange="inputAction3()"/>
+
+    <p id="content"></p>
+<script type="text/javascript">
+    function boxAction1(){
+        console.log("Action111111...");
+    }
+    function boxAction2(){
+        console.log("Action22222...");
+    }
+var ips1 = document.getElementById("ips");
+var ips2 = document.getElementById("ips2");
+var ct = document.getElementById("content");
+function  inputAction1(){
+    var v1 = ips.value;
+    var v3 = ips1.value;
+    var v2 = ips2.value;
+    ct.innerText = v1+" "+v3+" +v2;
+
+
+}
+</script>
+</body>
+</html>

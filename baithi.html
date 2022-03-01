@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Thi</title>
+    <link rel="stylesheet" href="css/baithi.css"
+</head>
+<body>
+
+<div class="main">
+    <h1>Multi Steps Form Widget</h1>
+    <div class="content">
+        <div class="stepsForm sf-theme-default" style="width: 100%;">
+            <form method="post">
+                <div class="sf-steps">
+                    <div class="sf-steps-content sf-steps-center">
+                        <div class="sf-active">
+                            <span></span> Profile
+                        </div>
+                        <div>
+                            <span></span> Account
+                        </div>
+                        <div>
+                            <span></span> Details
+                        </div>
+                        <div>
+                            <span></span> Profession
+                        </div>
+                    </div>
+                </div>
+                <div class="sf-steps-form sf-radius">
+
+                    <ul class="sf-content" style="display: block;"> <!-- form step one -->
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="text" name="name" placeholder="First Name" data-required="true">
+                            </div>
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="text" name="surname" placeholder="Last Name" data-required="true">
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="text" placeholder="Phone" data-number="true">
+                            </div>
+
+                        </li>
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <div class="sf-radio">
+                                    Gender :
+                                    <label><input type="radio" value="M" name="gender" data-required="true"><span></span> Female</label>
+                                    <label><input type="radio" value="F" name="gender" data-required="true"><span></span> Male</label>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_6" style="width: 100%; margin-bottom: 2rem;">
+                                <textarea placeholder="Address" name="ADDRESS"></textarea>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="sf-content" style="display: none;"> <!-- form step two -->
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="text" placeholder="Username" data-required="true">
+                            </div>
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="text" placeholder="Email" data-required="true" data-email="true">
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="password" placeholder="Password" data-required="true" data-confirm="true">
+                            </div>
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <input type="password" placeholder="Re-Type Password" data-required="true" data-confirm="true">
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_6" style="width: 100%; margin-bottom: 2rem;">
+                                <div class="sf-check">
+                                    <label><input type="checkbox" value="test" name="test" data-required="true"><span></span> By checking this box, I agree to the Terms &amp; Conditions &amp; Privacy Policy.</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="sf-content" style="display: none;"> <!-- form step tree -->
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected">Your Age</option>
+                                        <option value="de">0-17</option>
+                                        <option value="en">18-25</option>
+                                        <option value="us">25-50</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected">Country</option>
+                                        <option value="de">India</option>
+                                        <option value="en">Britian</option>
+                                        <option value="us">China</option>
+                                        <option value="tr">Turkey</option>
+                                        <option value="jp">Spain</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="sf-content" style="display: none;"> <!-- form step four -->
+                        <li style="margin-bottom: 0px;">
+                            <div class="sf_columns column_3" style="width: 100%; margin-bottom: 2rem;">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected">Profession</option>
+                                        <option value="de">Designer</option>
+                                        <option value="en">Officer</option>
+                                        <option value="us">Clerk</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="sf_columns column_6" style="width: 100%; margin-bottom: 2rem;">
+                                <textarea placeholder="Address" name="ADDRESS"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sf-steps-navigation sf-align-center">
+                    <span id="sf-msg" class="sf-msg-error"></span>
+                    <button id="sf-prev" type="button" class="sf-button" style="display: none;">Previous</button>
+                    <button id="sf-next" type="button" class="sf-button">Next</button>
+                </div>
+            </form>
+            <script>
+                $(document).ready(function(e) {
+
+                    $(".stepsForm").stepsForm({
+                        width			:'100%',
+                        active			:0,
+                        errormsg		:'Check faulty fields.',
+                        sendbtntext		:'Create Account',
+                    });
+
+                    $(".container .themes>span").click(function(e) {
+                        $(".container .themes>span").removeClass("selectedx");
+                        $(this).addClass("selectedx");
+                        $(".stepsForm").removeClass().addClass("stepsForm");
+                        $(".stepsForm").addClass("sf-theme-"+$(this).attr("data-value"));
+                    });
+                });
+            </script>
+
+        </div>
+
+    </div>
+    <p class="footer">© 2016 Multi Steps Form Widget. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+</div>
+
+
+</body>
+</html>
